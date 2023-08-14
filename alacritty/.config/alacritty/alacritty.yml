@@ -23,15 +23,6 @@ window:
 
 font:
   normal:
-    family: "MesloLGS NF"
-    style: Medium
-  italic:
-    family: "MesloLGS NF"
-    style: Medium Italic
-  bold:
-    family: "MesloLGS NF"
-    style: Heavy
-  bold_italic:
-    family: "MesloLGS NF"
-    style: Heavy Italic
+    family: MesloLGS NF
+    style: Regular
   size: 14.0
