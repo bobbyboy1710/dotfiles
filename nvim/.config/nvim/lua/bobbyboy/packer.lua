@@ -42,12 +42,28 @@ return require('packer').startup(function(use)
     }
     use("folke/zen-mode.nvim")
     use("eandrju/cellular-automaton.nvim")
-    use("laytan/cloak.nvim")
     -- file explorer
-	use("nvim-tree/nvim-tree.lua")
-	use("kyazdani42/nvim-web-devicons")
+    use("nvim-tree/nvim-tree.lua")
+    use("kyazdani42/nvim-web-devicons")
 
-	-- statusline
-	use("nvim-lualine/lualine.nvim")
+    -- statusline
+    use("nvim-lualine/lualine.nvim")
     use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+    --null_ls
+    use("jose-elias-alvarez/null-ls.nvim")
+    --
+    use {
+        "nathom/filetype.nvim",
+        config = function()
+            require("filetype").setup {
+                overrides = {
+                    extensions = {
+                        tf = "terraform",
+                        tfvars = "terraform",
+                        tfstate = "json",
+                    },
+                },
+            }
+        end,
+    }
 end)

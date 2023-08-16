@@ -1,5 +1,5 @@
 set fish_greeting ""
-set -gx TERM xterm-256color
+#set -gx TERM xterm-256color
 
 # theme
 set -g theme_color_scheme terminal-dark
@@ -21,6 +21,7 @@ set -gx EDITOR nvim
 
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
+set -gx PATH ~/.local/scripts $PATH
 
 # NodeJS
 #set -gx PATH /usr/local/lib/node_modules $PATH
@@ -47,5 +48,5 @@ end
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/dmytro/google-cloud-sdk/path.fish.inc' ]; . '/home/dmytro/google-cloud-sdk/path.fish.inc'; end
 #Keybind
-bind \cf 'tmux-sessionizer\n'
+bind \cf 'tmux-sessionizer'
 

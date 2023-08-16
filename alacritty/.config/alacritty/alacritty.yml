@@ -10,8 +10,8 @@
 
 live_config_reload: true
 
-env:
-  TERM: xterm-256color
+  #env:
+  #  TERM: xterm-256color
 
 window:
   decorations: none
@@ -25,4 +25,4 @@ font:
   normal:
     family: MesloLGS NF
     style: Regular
-  size: 14.0
+  size: 12.0
