@@ -5,17 +5,11 @@
 	insteadOf = https://github.com/
 [core]
  	editor = nvim
- 	excludesfile = /Users/dmytrobabich/.gitignore
-	pager = delta
-[interactive]
-	diffFilter = delta --color-only
+    #excludesfile = /Users/dmytrobabich/.gitignore
 [color]
 	ui = true
 [diff]
 	colorMoved = default
-[delta]
-	navigate = true
-	line-numbers = true
 [merge]
 	conflictstyle = diff3
 	tool = vimdiff

@@ -6,7 +6,10 @@ lsp.ensure_installed({
     'tsserver',
     'rust_analyzer',
     'lua_ls',
-    'bashls'
+    'bashls',
+    'gopls',
+    'terraformls',
+    'pyright',
 })
 
 -- Fix Undefined global 'vim'
@@ -20,6 +23,17 @@ lsp.configure('lua_ls', {
     }
 })
 
+lsp.configure('gopls', {
+    cmd = {"gopls"},
+    filetypes = { "go", "gomod", "gowork", "gotmpl"},
+    settings = {
+        completedUnimported = true,
+        usePlaceholders = false,
+        analyses = {
+            unusedparams = true
+        }
+    }
+})
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
@@ -30,8 +44,8 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
     ["<C-Space>"] = cmp.mapping.complete(),
 })
 
-cmp_mappings['<Tab>'] = nil
-cmp_mappings['<S-Tab>'] = nil
+--cmp_mappings['<Tab>'] = nil
+--cmp_mappings['<S-Tab>'] = nil
 
 lsp.setup_nvim_cmp({
     mapping = cmp_mappings
